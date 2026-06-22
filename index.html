@@ -250,6 +250,56 @@ td.cell.selon{background:#eaf6ee !important;outline:2px solid #1f6b3a;outline-of
 .svcrow:first-child{border-top:none}
 .svcn{font-weight:700;color:#2a2118;flex:0 0 36%}
 .svch{color:#3a3026;text-align:right;line-height:1.4}
+/* ===== Chatbox ===== */
+#chatFab{position:fixed;right:16px;bottom:16px;width:58px;height:58px;border:none;border-radius:50%;background:var(--wine);color:#fff;font-size:26px;box-shadow:0 6px 18px rgba(0,0,0,.28);cursor:pointer;z-index:9999;display:flex;align-items:center;justify-content:center}
+#chatFab:active{transform:scale(.94)}
+.chatpanel{position:fixed;right:14px;bottom:14px;width:min(380px,calc(100vw - 28px));height:min(560px,calc(100vh - 90px));background:#fff;border-radius:18px;box-shadow:0 12px 40px rgba(0,0,0,.32);display:flex;flex-direction:column;overflow:hidden;z-index:9999;border:1px solid #e7d9bf}
+.chathead{background:linear-gradient(135deg,var(--wine),var(--wine2));color:#fff;padding:13px 16px;position:relative;flex-shrink:0}
+.chatname{font-size:21px;font-weight:700;line-height:1}
+.chatname .ia{color:var(--gold)}
+.chatsub{font-size:11.5px;opacity:.88;margin-top:3px}
+#chatClose{position:absolute;top:12px;right:12px;background:rgba(255,255,255,.16);border:none;color:#fff;width:28px;height:28px;border-radius:50%;font-size:14px;cursor:pointer}
+.chatmsgs{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:9px;background:#faf6ee}
+.cmsg{max-width:84%;padding:9px 12px;border-radius:14px;font-size:13px;line-height:1.45;word-wrap:break-word}
+.cmsg.bot{align-self:flex-start;background:#fff;border:1px solid #ece0c6;color:#2a2118;border-bottom-left-radius:4px}
+.cmsg.user{align-self:flex-end;background:var(--wine);color:#fff;border-bottom-right-radius:4px}
+.cmsg.bot b{color:var(--wine)}
+.cmsg a{color:inherit}
+.chatchips{display:flex;flex-wrap:wrap;gap:6px;padding:8px 12px;border-top:1px solid #eee;max-height:128px;overflow-y:auto;background:#fff;flex-shrink:0}
+.cchip{background:#fff;border:1.5px solid var(--gold);color:var(--wine);border-radius:999px;padding:6px 11px;font-size:11.5px;font-weight:600;cursor:pointer;text-align:left;line-height:1.25}
+.cchip:active{background:#f7efdc}
+.cchip.back{border-color:#ccc;color:#777}
+.chatinput{display:flex;gap:8px;padding:10px 12px;border-top:1px solid #eee;background:#fff;flex-shrink:0}
+.chatinput input{flex:1;border:1.5px solid #ddd;border-radius:999px;padding:9px 14px;font-size:14px;outline:none}
+.chatinput input:focus{border-color:var(--wine)}
+.chatinput button{background:var(--wine);color:#fff;border:none;border-radius:50%;width:40px;height:40px;font-size:16px;cursor:pointer;flex-shrink:0}
+.muralempty{text-align:center;color:var(--muted);padding:42px 12px;font-size:14px}
+.mcard{background:#fffdf8;border:1px solid #ece0c6;border-left:4px solid var(--wine);border-radius:14px;padding:14px 16px;margin-bottom:12px}
+.mtop{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap}
+.mtag{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:3px 9px;border-radius:999px}
+.mcount{font-size:12.5px;font-weight:700;white-space:nowrap}
+.mtitle{font-family:"Fraunces",serif;font-size:17px;font-weight:700;color:#2a2118;margin-bottom:4px;line-height:1.25}
+.mtext{font-size:13.5px;color:#3a3026;line-height:1.5}
+.mtext b{color:var(--wine)}
+.mcta{display:inline-block;margin-top:11px;color:#fff;font-weight:700;font-size:13px;padding:9px 16px;border-radius:999px;text-decoration:none}
+.mcta:active{opacity:.85}
+.disc{background:#fff7e6;border:1px solid #f0d9a6;border-radius:10px;padding:9px 12px;font-size:12.5px;color:#6a5320;line-height:1.45;margin:8px 0 4px}
+.disc b{color:#8a6d1a}
+.solbox{background:#fffdf8;border:1.5px solid var(--gold);border-radius:16px;padding:20px 18px;text-align:center;margin-top:6px}
+.soltitle{font-size:18px;font-weight:700;color:var(--wine);margin-bottom:6px}
+.soltext{font-size:13.5px;color:#3a3026;line-height:1.5;margin-bottom:15px}
+.solbtn{display:inline-block;background:var(--wine);color:#fff;font-weight:700;font-size:15px;padding:13px 26px;border-radius:999px;text-decoration:none}
+.solbtn:active{background:var(--wine2)}
+.bkrow{display:flex;gap:9px;margin:14px 0 4px}
+.bkbtn{flex:1;background:#fffdf8;border:1.5px solid var(--gold);color:var(--wine);font-weight:700;font-size:13px;padding:11px;border-radius:12px;cursor:pointer}
+.bkbtn:active{background:#f7efdc}
+.bknote{font-size:11.5px;color:var(--muted);line-height:1.4;margin:2px 0 10px;text-align:center}
+.legal-ov{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:10000;display:flex;align-items:center;justify-content:center;padding:18px}
+.legal-box{background:#fff;border-radius:16px;max-width:440px;width:100%;max-height:80vh;overflow-y:auto;padding:24px 22px;position:relative}
+.legal-box h3{color:var(--wine);font-size:17px;margin:16px 0 6px}
+.legal-box h3:first-of-type{margin-top:0}
+.legal-box p{font-size:13px;color:#3a3026;line-height:1.55;margin:0 0 6px}
+.legal-x{position:absolute;top:12px;right:12px;background:#f0e7d4;border:none;width:30px;height:30px;border-radius:50%;font-size:15px;cursor:pointer;color:var(--wine)}
 </style>
 </head>
 <body>
@@ -258,15 +308,22 @@ td.cell.selon{background:#eaf6ee !important;outline:2px solid #1f6b3a;outline-of
   <div class="brandtxt"><b id="brandName">UApp</b><span>Centro de Estudiantes · Derecho · UA Temuco</span></div>
 </div>
 <div class="tabbar">
-  <button class="tab active" data-tab="malla">Avance Curricular</button>
+  <button class="tab active" data-tab="mural">Mural</button>
+  <button class="tab" data-tab="malla">Avance Curricular</button>
   <button class="tab" data-tab="calc">Simulador de Notas</button>
   <button class="tab" data-tab="hor">Horarios</button>
   <button class="tab" data-tab="plan">Planificador</button>
   <button class="tab" data-tab="pru">Pruebas</button>
   <button class="tab" data-tab="info">Info</button>
+  <button class="tab" data-tab="solic">Solicitudes</button>
 </div>
 
-<section id="malla">
+<section id="mural"><div class="wrap">
+  <div class="mh serif">Mural</div>
+  <div class="msub">Avisos y fechas importantes del momento.</div>
+  <div id="muralList"></div>
+</div></section>
+<section id="malla" style="display:none">
   <div class="wrap">
     <h1 class="h1 serif">Mi Avance Curricular</h1>
     <p class="lead">Toda tu carrera en un tablero, nivel por nivel. Tu progreso se guarda en este dispositivo.</p>
@@ -288,6 +345,12 @@ td.cell.selon{background:#eaf6ee !important;outline:2px solid #1f6b3a;outline-of
     </div>
     <p class="boardhint">Desliza para recorrer los niveles →</p>
     <div id="years" class="board"></div>
+    <div class="bkrow">
+      <button class="bkbtn" id="bkExp">⬇️ Respaldar mi avance</button>
+      <button class="bkbtn" id="bkImp">⬆️ Restaurar respaldo</button>
+    </div>
+    <p class="bknote">Tu avance se guarda solo en este dispositivo. Respáldalo para no perderlo si cambias de teléfono o limpias el navegador.</p>
+    <input type="file" id="bkFile" accept="application/json,.json" style="display:none">
     <button class="resetbtn" id="reset">🔄 Reiniciar todo mi progreso</button>
   </div>
 </section>
@@ -297,6 +360,7 @@ td.cell.selon{background:#eaf6ee !important;outline:2px solid #1f6b3a;outline-of
   <div class="wrap">
     <h1 class="h1 serif">Simulador de Notas</h1>
     <p class="lead">Calcula tu promedio con los estándares de la carrera de Derecho.</p>
+    <div class="disc">⚠️ Herramienta de apoyo <b>referencial</b>, no oficial. Confirma tus notas y ponderaciones con tu profesor, el syllabus y Registro Curricular.</div>
     <div class="note">Escribe las notas en formato <b>10 a 70</b> (10 = 1,0 · 55 = 5,5 · 70 = 7,0). Aprobar: 40 · Examen: 35. El promedio se muestra en escala <b>1,0 a 7,0</b>. No aplica a talleres. Elige el tipo de ramo:</div>
     <div class="seg" id="yearSeg"><button data-m="first" class="on">1er año · 70/30</button><button data-m="upper">2º año en adelante · 90/10</button></div>
     <div class="tablehead"><span>EVALUACIÓN</span><span class="c">PORCENTAJE</span><span class="c">NOTA (10–70)</span></div>
@@ -338,6 +402,7 @@ td.cell.selon{background:#eaf6ee !important;outline:2px solid #1f6b3a;outline-of
 <section id="plan" style="display:none"><div class="wrap">
   <div class="mh serif">Planificador de carga</div>
   <div class="msub">Cruza tu avance con la oferta del trimestre y propone qué tomar, sin choques de horario.</div>
+  <div class="disc">⚠️ Propuesta <b>referencial</b>, no es una inscripción oficial. Confirma siempre con tu malla y con Registro Curricular antes de inscribir.</div>
   <div class="note">Según el <b>Reglamento (Art. 17/19)</b> y la <b>Circular N°04/2026</b>: primero los ramos <b>pendientes del nivel más bajo</b> y los <b>reprobados</b> ofertados (obligatorios) · cumplir <b>prerrequisitos</b> · <b>sin exceso de niveles</b> (hasta 4 consecutivos) · <b>sin coincidencia horaria</b> · máx. <b>30 créditos</b>. El Seminario de Investigación lo inscribe la Carrera. Los ramos de semestre alterno (Plan No Ajustado) solo aparecen si los reprobaste. Marca tu avance en <b>Avance Curricular</b>.</div>
   <button class="calcn" id="planBtn" style="width:100%">PROPONER MI CARGA</button>
   <div id="planOut" style="margin-top:6px"></div>
@@ -430,13 +495,49 @@ td.cell.selon{background:#eaf6ee !important;outline:2px solid #1f6b3a;outline-of
   <p class="note">(*) Horario provisorio o sujeto a ajuste. Fuente: Horarios de Servicios UA · Sede Temuco.</p>
 </div></section>
 
+<section id="solic" style="display:none"><div class="wrap">
+  <div class="mh serif">Solicitudes</div>
+  <div class="msub">¿Necesitas hacer una petición, consulta o presentar un caso al Centro de Estudiantes? Este es el canal.</div>
+  <div class="solbox">
+    <div class="soltitle serif">📨 Formulario de solicitudes</div>
+    <p class="soltext">Envía aquí tus peticiones, consultas o casos al Centro de Estudiantes de Derecho. Lo revisamos y te respondemos lo antes posible.</p>
+    <a class="solbtn" href="https://forms.office.com/r/FXArxG0RTW" target="_blank" rel="noopener">Hacer una solicitud →</a>
+  </div>
+  <p class="note">También puedes escribirnos por Instagram <b>@listaa.derechoua</b> o al correo <b>cceedereua@gmail.com</b>.</p>
+</div></section>
+
+<div id="legalModal" class="legal-ov" style="display:none">
+  <div class="legal-box">
+    <button class="legal-x" id="legalX" aria-label="Cerrar">✕</button>
+    <h3 class="serif">Privacidad</h3>
+    <p>UApp es una herramienta gratuita creada por el Centro de Estudiantes de Derecho. Tu avance, notas y ramos inscritos se guardan <b>únicamente en este dispositivo</b> (en el navegador): no se envían a ningún servidor ni los vemos nosotros, y no recopilamos datos personales. Los formularios externos (opinión y solicitudes) son de Google y Microsoft y se rigen por sus propias políticas.</p>
+    <h3 class="serif">Términos de uso</h3>
+    <p>UApp es una <b>herramienta de apoyo referencial</b> hecha por estudiantes; no es un sistema oficial de la Universidad. La información (fechas, horarios, calendario, oferta de ramos y reglamento) puede cambiar: confirma siempre con las fuentes oficiales (Registro Curricular y la Dirección de Carrera) antes de tomar decisiones. El uso de la app es de tu responsabilidad.</p>
+  </div>
+</div>
+
 <footer>
   <div class="fn serif">Derecho · Universidad Autónoma de Chile</div>
   <p class="motto serif">«Tu voz, nuestra causa»</p>
   <a class="fbk" href="https://forms.gle/Zo5XL1Pmmv2sGMtm8" target="_blank" rel="noopener">💬 Danos tu opinión</a>
   <p class="sm">Una herramienta del <b>Centro de Estudiantes de Derecho</b> · UA Temuco</p>
-  <p class="sm" style="margin-top:8px"><a href="#">Términos</a> · <a href="#">Privacidad</a></p>
+  <p class="sm" style="margin-top:8px"><a href="javascript:void(0)" id="openLegal">Términos y Privacidad</a></p>
 </footer>
+
+<button id="chatFab" aria-label="Abrir preguntas frecuentes">💬</button>
+<div id="chatPanel" class="chatpanel" style="display:none">
+  <div class="chathead">
+    <div class="chatname serif">Dona <span class="ia">Tech</span></div>
+    <div class="chatsub">Asistente de preguntas frecuentes</div>
+    <button id="chatClose" aria-label="Cerrar">✕</button>
+  </div>
+  <div id="chatMsgs" class="chatmsgs"></div>
+  <div id="chatChips" class="chatchips"></div>
+  <div class="chatinput">
+    <input id="chatIn" type="text" placeholder="Escribe tu pregunta…" autocomplete="off">
+    <button id="chatSend" aria-label="Enviar">➤</button>
+  </div>
+</div>
 
 <script>
 const COURSES=[
@@ -530,8 +631,8 @@ function render(){
 }
 document.getElementById("reset").onclick=()=>{if(confirm("¿Reiniciar todo tu progreso?")){state={};save();render();}};
 
-const SECS=["malla","calc","hor","plan","pru","info"];
-function go(tab){document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x.dataset.tab===tab));SECS.forEach(s=>document.getElementById(s).style.display=s===tab?"":"none");if(tab==="plan")planPropose();if(tab==="hor")renderHorView(horMode);if(tab==="pru")renderPru(pruMode);window.scrollTo(0,0);}
+const SECS=["mural","malla","calc","hor","plan","pru","info","solic"];
+function go(tab){document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x.dataset.tab===tab));SECS.forEach(s=>document.getElementById(s).style.display=s===tab?"":"none");if(tab==="plan")planPropose();if(tab==="hor")renderHorView(horMode);if(tab==="pru")renderPru(pruMode);if(tab==="mural")renderMural();window.scrollTo(0,0);}
 document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>go(b.dataset.tab));
 document.getElementById("toMalla").onclick=()=>go("malla");
 
@@ -727,7 +828,155 @@ document.querySelectorAll("#pruSeg button").forEach(b=>b.onclick=()=>renderPru(b
 renderPru("all");
 renderHorView("all");
 
-renderEvals();calc();render();
+/* ===== Mural de avisos (editar esta lista para publicar/quitar avisos) ===== */
+const AVISOS=[
+  {tipo:"Encuesta", nivel:"importante",
+   titulo:"Encuesta de Evaluación de la Docencia",
+   texto:"Ya está disponible. <b>Respóndela a tiempo:</b> si no la completas, podrías quedar con <b>bloqueo para la toma de carga</b> de asignaturas del próximo período.",
+   hasta:"2026-07-04",
+   cta:{label:"Ir a la encuesta", url:"#"}},
+  {tipo:"Inscripción", nivel:"info",
+   titulo:"Inscripción de ramos · 3er trimestre",
+   texto:"La inscripción de asignaturas del 3er trimestre es el <b>4 de septiembre</b>. Aprovecha de revisar tu Avance y el Planificador para llegar listo.",
+   hasta:"2026-09-04"},
+  {tipo:"Centro de Estudiantes", nivel:"evento",
+   titulo:"Asamblea del Centro de Estudiantes",
+   texto:"Te invitamos a participar. ¡Tu voz, nuestra causa! Más info en nuestro Instagram @listaa.derechoua.",
+   hasta:"2026-06-30"}
+];
+function renderMural(){
+  const box=document.getElementById("muralList"); if(!box) return;
+  const today=new Date(); today.setHours(0,0,0,0);
+  const NIV={importante:{c:"#8b0c0c",bg:"#fdeaea"},info:{c:"#1d4ed8",bg:"#e9f0fd"},evento:{c:"#9a6b00",bg:"#fbf3df"},normal:{c:"#6c0909",bg:"#fffdf8"}};
+  const items=AVISOS.map(a=>{
+    let dleft=null;
+    if(a.hasta){const d=new Date(a.hasta+"T00:00:00");dleft=Math.round((d-today)/86400000);}
+    let okDesde=true;
+    if(a.desde){const ds=new Date(a.desde+"T00:00:00");okDesde=today>=ds;}
+    return Object.assign({},a,{dleft:dleft,okDesde:okDesde});
+  }).filter(a=> a.okDesde && (a.dleft===null || a.dleft>=0));
+  items.sort((x,y)=>{ if(x.dleft===null)return 1; if(y.dleft===null)return -1; return x.dleft-y.dleft; });
+  if(!items.length){ box.innerHTML='<div class="muralempty">No hay avisos por ahora 🎉</div>'; return; }
+  box.innerHTML=items.map(a=>{
+    const n=NIV[a.nivel]||NIV.normal;
+    let cd="";
+    if(a.dleft!==null){
+      const t=a.dleft===0?"Último día":a.dleft===1?"Queda 1 día":"Quedan "+a.dleft+" días";
+      cd='<span class="mcount" style="color:'+n.c+'">⏳ '+t+'</span>';
+    }
+    const cta=a.cta?'<a class="mcta" style="background:'+n.c+'" href="'+a.cta.url+'"'+(a.cta.url&&a.cta.url!=="#"?' target="_blank" rel="noopener"':'')+'>'+a.cta.label+'</a>':"";
+    return '<div class="mcard" style="border-left-color:'+n.c+'"><div class="mtop"><span class="mtag" style="color:'+n.c+';background:'+n.bg+'">'+a.tipo+'</span>'+cd+'</div><div class="mtitle">'+a.titulo+'</div><div class="mtext">'+a.texto+'</div>'+cta+'</div>';
+  }).join("");
+}
+renderEvals();calc();render();renderMural();
+
+/* ===== Respaldo de avance + legales ===== */
+function exportData(){
+  try{
+    const data={}; for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);data[k]=localStorage.getItem(k);}
+    const blob=new Blob([JSON.stringify({app:"UApp",fecha:new Date().toISOString(),data:data},null,2)],{type:"application/json"});
+    const url=URL.createObjectURL(blob), a=document.createElement("a");
+    a.href=url; a.download="uapp-respaldo-"+new Date().toISOString().slice(0,10)+".json"; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+  }catch(e){ alert("No pude generar el respaldo."); }
+}
+function importData(file){
+  const r=new FileReader();
+  r.onload=function(){
+    try{
+      const obj=JSON.parse(r.result), d=(obj&&obj.data)?obj.data:obj;
+      if(!d||typeof d!=="object") throw 0;
+      if(!confirm("Esto reemplazará tu avance actual con el del respaldo. ¿Continuar?")) return;
+      Object.keys(d).forEach(function(k){ localStorage.setItem(k,d[k]); });
+      alert("¡Avance restaurado! La app se recargará."); location.reload();
+    }catch(e){ alert("No pude leer el archivo. Asegúrate de que sea un respaldo de UApp (.json)."); }
+  };
+  r.readAsText(file);
+}
+(function(){
+  var e=document.getElementById("bkExp"); if(e) e.onclick=exportData;
+  var im=document.getElementById("bkImp"), f=document.getElementById("bkFile");
+  if(im&&f){ im.onclick=function(){ f.click(); }; f.onchange=function(){ if(f.files[0]) importData(f.files[0]); f.value=""; }; }
+  var ol=document.getElementById("openLegal"), lm=document.getElementById("legalModal"), lx=document.getElementById("legalX");
+  if(ol&&lm) ol.onclick=function(){ lm.style.display="flex"; };
+  if(lx&&lm) lx.onclick=function(){ lm.style.display="none"; };
+  if(lm) lm.onclick=function(ev){ if(ev.target===lm) lm.style.display="none"; };
+})();
+
+/* ===== Chatbox VenIA — banco de preguntas frecuentes ===== */
+(function(){
+  const FAQ=[
+   // Calendario académico (régimen trimestral · TECH)
+   {c:"📅 Calendario",q:"¿Cuándo empiezan las clases?",k:"empiezan inician comienzan empieza inicio clases partida partir comienzo cuando empiezan",a:"Inicio de clases de cada trimestre 2026 (Derecho vespertino TECH):<br>• <b>1er trimestre:</b> lunes 2 de marzo<br>• <b>2º trimestre:</b> lunes 1 de junio<br>• <b>3er trimestre:</b> lunes 7 de septiembre"},
+   {c:"📅 Calendario",q:"¿Cuándo termina cada trimestre?",k:"termina termino fin final acaba periodo lectivo cuando termina cierre",a:"Fin del período lectivo 2026:<br>• <b>1er trimestre:</b> viernes 22 de mayo<br>• <b>2º trimestre:</b> viernes 28 de agosto<br>• <b>3er trimestre:</b> viernes 4 de diciembre"},
+   {c:"📅 Calendario",q:"¿Cuándo es el receso?",k:"receso vacaciones descanso intertrimestral semana libre feriado largo",a:"Recesos 2026:<br>• <b>1er trimestre:</b> 25 al 29 de mayo<br>• <b>2º trimestre:</b> 13 al 17 de julio<br>• <b>Fiestas Patrias (3er trim.):</b> 14 al 17 de septiembre"},
+   {c:"📅 Calendario",q:"¿Qué feriados hay en 2026?",k:"feriado feriados festivo festivos asueto no hay clases dias libres",a:"Feriados 2026: Viernes Santo 3 abr · Día del Trabajo 1 may · Glorias Navales 21 may · San Pedro y San Pablo 29 jun · Virgen del Carmen 16 jul · Asunción 15 ago · Fiestas Patrias 18 sep · Encuentro de Dos Mundos 12 oct · Inmaculada Concepción 8 dic · Navidad 25 dic."},
+   // Inscripción de ramos
+   {c:"📝 Inscripción",q:"¿Hasta cuándo puedo inscribir ramos?",k:"inscribir inscripcion ramos asignaturas tomar inscribo carga academica cuando inscribo escribir ramo",a:"Inscripción de asignaturas 2026 (TECH):<br>• <b>1er trimestre:</b> 9 y 10 de enero<br>• <b>2º trimestre:</b> viernes 29 de mayo<br>• <b>3er trimestre:</b> viernes 4 de septiembre"},
+   {c:"📝 Inscripción",q:"¿Hasta cuándo puedo modificar mi malla / inscripción?",k:"modificar modificacion cambiar malla inscripcion ajustar agregar botar eliminar ramo plazo",a:"Modificación de la inscripción de asignaturas 2026 (TECH):<br>• <b>1er trimestre:</b> 24 al 27 de febrero<br>• <b>2º trimestre:</b> 1 al 5 de junio<br>• <b>3er trimestre:</b> 7 al 11 de septiembre"},
+   {c:"📝 Inscripción",q:"¿Cuándo son las pruebas y exámenes?",k:"prueba pruebas evaluacion evaluaciones examen examenes solemne certamen fechas notas repeticion",a:"Cada trimestre tiene evaluaciones regulares y un examen de repetición. Las <b>fechas exactas de cada ramo</b> (1ª, 2ª y examen) están en la pestaña <b>Pruebas</b> de esta app. Examen de repetición: 1er trim 25–27 may · 2º trim 31 ago–2 sep · 3er trim 9–11 dic."},
+   // Centro de Estudiantes
+   {c:"⚖️ Centro de Estudiantes",q:"¿Cómo contacto al Centro de Estudiantes?",k:"centro estudiantes contacto contactar ccee instagram correo redes hablar ustedes",a:"Escríbenos por Instagram <b>@listaa.derechoua</b> o al correo <b>cceedereua@gmail.com</b>. ¡Estamos para ayudarte!"},
+   // Autoridades
+   {c:"👤 Autoridades",q:"¿Quién es la Directora de Sede / Vicedecana?",k:"directora vicedecana decana valeska rivas autoridad jefa direccion sede",a:"<b>Valeska Rivas Arias</b> — Vicedecana de la Facultad de Derecho y Directora Sede Temuco.<br>📧 valeska.rivas@uautonoma.cl"},
+   {c:"👤 Autoridades",q:"¿Quién es la Secretaria académica?",k:"secretaria academica francisca game",a:"<b>Francisca Game Musante</b> — Secretaria académica.<br>📧 francisca.game@uautonoma.cl"},
+   {c:"👤 Autoridades",q:"¿Quién es el Coordinador vespertino?",k:"coordinador vespertino fernando bravo coordinacion jornada",a:"<b>Fernando Bravo Alarcón</b> — Coordinador vespertino.<br>📧 fernando.bravo@uautonoma.cl"},
+   {c:"👤 Autoridades",q:"¿Cómo contacto a secretaría de Derecho?",k:"secretaria administrativa daniela mella administracion telefono carrera contacto derecho",a:"<b>Daniela Mella Tapia</b> — Secretaria Administrativa.<br>📧 derecho.temuco01@cloud.uautonoma.cl · 📞 +56 45 289 5078"},
+   // Servicios
+   {c:"🏛️ Servicios",q:"¿Dónde queda Registro Curricular?",k:"registro curricular certificado certificados horario ubicacion donde queda tramite actas concentracion",a:"<b>Registro Curricular</b> — Edificio Registro Curricular, Sector Sur.<br>🕗 Lun a Jue 08:30–13:30 y 15:00–18:30 · Vie 08:30–13:30 y 15:00–18:00<br>📧 registrocurriculartco@uautonoma.cl"},
+   {c:"🏛️ Servicios",q:"¿Dónde está la Sala de Primeros Auxilios?",k:"primeros auxilios enfermeria salud emergencia accidente sala medico",a:"<b>Sala de Primeros Auxilios</b> — Edificio L, piso 1.<br>🕗 Lun a Vie 08:30–22:00 · Sáb 08:30–16:00<br>📧 primerosauxilios.temuco@cloud.uautonoma.cl · 📞 +56 45 289 1242"},
+   {c:"🏛️ Servicios",q:"¿Cómo contacto a Finanzas?",k:"finanzas pago pagos arancel cuota deuda matricula cobranza dinero plata",a:"<b>Finanzas</b><br>🕗 Lun a Jue 08:00–13:15 y 15:00–18:15 · Vie 08:00–13:15 y 15:00–17:45 · Mié hasta 20:00<br>📧 finanzas.temuco@uautonoma.cl · 📞 +56 45 289 5244 / 5245 / 5051"},
+   {c:"🏛️ Servicios",q:"¿Cuál es el horario de la Biblioteca?",k:"biblioteca libros estudiar sala estudio horario",a:"<b>Biblioteca:</b> 08:00–22:00 · Sábado 09:00–16:00."},
+   {c:"🏛️ Servicios",q:"¿Hasta qué hora están el casino y las cafeterías?",k:"casino cafeteria comida almuerzo colacion snack gaudi cis comer kiosco",a:"Casino 08:00–21:30 · Cafetería CIS 08:00–20:00 (Sáb 08:00–17:00) · Cafetería Gaudí 09:00–22:00 · Cafetería Snack 08:00–17:00. <i>(Horarios provisorios)</i>"},
+   // Enlaces
+   {c:"🔗 Enlaces",q:"¿Dónde veo el calendario académico?",k:"calendario academico fechas oficiales pdf documento ver calendario",a:"Tienes el calendario académico 2026 completo en la pestaña <b>Info → Enlaces útiles</b>."},
+   {c:"🔗 Enlaces",q:"¿Dónde veo becas y beneficios?",k:"beca becas beneficio beneficios apoyo gratuidad ayuda economica financiamiento",a:"En la pestaña <b>Info → Enlaces útiles</b> está el enlace a <b>Beneficios y apoyo estudiantil</b> de la Universidad."},
+   // Reglamento General del Estudiante de Pregrado
+   {c:"📖 Reglamento",q:"¿Con qué nota apruebo un ramo?",k:"nota aprobar aprobacion minima cuatro paso aprueba calificacion aprobar ramo",a:"La nota mínima de aprobación es <b>4,0</b> (las notas van de 1,0 a 7,0). Para obtener un 4,0 se exige un nivel de logro mínimo del <b>60%</b>. El syllabus puede pedir una nota de aprobación más alta."},
+   {c:"📖 Reglamento",q:"¿Qué es el examen de repetición y cuándo lo puedo dar?",k:"examen repeticion recuperativo segunda oportunidad reprobado 3.5 promedio recuperar",a:"Si en un ramo <b>teórico</b> tu promedio final queda <b>entre 3,5 y 3,9</b> y cumpliste la asistencia, puedes rendir el <b>examen de repetición</b> (en las fechas del calendario). Si obtienes 4,0 o más, tu nota final será 4,0; si no, mantienes la nota que tenías."},
+   {c:"📖 Reglamento",q:"¿Cuánta asistencia necesito?",k:"asistencia minima faltar inasistencia porcentaje asistir cuanta falta",a:"Asistencia mínima: <b>70% en primer año</b> y <b>60% en cursos superiores</b>. En componentes prácticos (talleres, laboratorios) es 100%. En vespertino TECH cuenta tu participación remota sincrónica o presencial."},
+   {c:"📖 Reglamento",q:"¿Cómo se calcula la nota final del ramo?",k:"nota final calculo ponderacion porcentaje acumulativa evaluaciones promedio ponderado como se calcula",a:"En ramos trimestrales: <b>2 evaluaciones regulares = 70%</b> y <b>1 evaluación acumulativa</b> (foros, quiz, trabajos) <b>= 30%</b>. La nota final es ese promedio ponderado, salvo que el syllabus indique otro sistema."},
+   {c:"📖 Reglamento",q:"¿Qué pasa si falto a una prueba?",k:"falto falte no asisti prueba evaluacion ausente justificar uno ausencia",a:"Si no asistes a una evaluación, se califica con <b>1,0</b> (lo mismo si hay copia o fraude). Si tuviste una causa justificada, debes presentar la solicitud de excepción en la Dirección de Carrera dentro de los plazos."},
+   {c:"📖 Reglamento",q:"¿Cuándo me entregan las notas y cómo pido recorrección?",k:"notas plazo entrega recorreccion revision recorregir reclamar dias publican",a:"El docente informa la nota en un máximo de <b>10 días corridos</b> tras la evaluación. Desde que se publica, tienes <b>3 días corridos</b> para pedirle la revisión de tu evaluación."},
+   {c:"📖 Reglamento",q:"¿Cuántas veces puedo reprobar un ramo antes de que me eliminen?",k:"reprobar reprobado eliminacion eliminado cuantas veces repetir eliminan tres",a:"Puedes cursar una asignatura hasta <b>3 veces</b>. Te eliminan de la carrera si: (a) repruebas <b>3 veces la misma asignatura</b>, o (b) repruebas el <b>50% de las asignaturas</b> cursadas al término del <b>8º nivel</b> (régimen trimestral)."},
+   {c:"📖 Reglamento",q:"Si repruebo un ramo, ¿qué tengo que hacer?",k:"reprobe reprobado ramo repetir volver cursar siguiente obligatorio inscribir arrastro",a:"El ramo reprobado debes cursarlo en el <b>período siguiente en que se dicte</b>, y la carrera lo inscribe <b>obligatoriamente</b> (sin derecho a sacarlo de tu carga)."},
+   {c:"📖 Reglamento",q:"¿Cuántos niveles puedo tomar al mismo tiempo?",k:"niveles cuantos ramos tomar inscribir adelantar consecutivos carga cruzar",a:"En régimen trimestral puedes inscribir asignaturas de <b>hasta 4 niveles distintos y consecutivos</b>, partiendo del nivel más bajo que tengas pendiente y cumpliendo los prerrequisitos. Casos excepcionales (más niveles o hasta 24 créditos) se solicitan a la Dirección de Carrera."},
+   {c:"📖 Reglamento",q:"¿Puedo bajar mi carga académica si me enfermo?",k:"bajar rebajar disminuir carga academica enfermedad enfermo reducir rebaja",a:"Sí. Por enfermedad certificada u otra causa grave puedes pedir disminuir tu carga <b>hasta en un 50%</b> a la Dirección de Carrera, a más tardar <b>4 semanas antes del término del trimestre</b>."},
+   {c:"📖 Reglamento",q:"¿Qué son la suspensión, anulación y retiro?",k:"suspension anulacion retiro abandono interrupcion congelar pausar dejar estudios",a:"<b>Suspensión:</b> pausar tus estudios un tiempo (antes de tomar carga). <b>Anulación:</b> dejar sin efecto todos los ramos inscritos (en la fecha del calendario). <b>Retiro:</b> dejar la carrera; no borra notas ni carga. Suspensión y anulación: hasta 2 veces cada una, máx. 1 año por vez."},
+   {c:"📖 Reglamento",q:"Si me eliminan, ¿puedo seguir estudiando?",k:"eliminado eliminacion continuidad seguir continuar gracia apelar solicitud comision",a:"El estudiante eliminado puede pedir <b>continuidad de estudios</b> por causa grave justificada, dentro de los plazos del calendario. Lo resuelve la <b>Comisión de Gracia</b> de Sede y su decisión es inapelable."},
+   {c:"📖 Reglamento",q:"¿Qué necesito para titularme?",k:"titulo titular titulacion egreso licenciado examen grado practica requisitos egresar",a:"Para el título profesional debes: aprobar todas las asignaturas del plan, realizar y aprobar la(s) práctica(s), rendir y aprobar el examen de título/grado (hasta 3 oportunidades) y estar al día con la Universidad. Tras egresar tienes hasta 2 años para completar las actividades de titulación."},
+   {c:"📖 Reglamento",q:"¿Qué es el Ius Postulandi?",k:"ius postulandi certificado tercer año postular tribunales iuspostulandi",a:"Para que te emitan el certificado de <b>Ius Postulandi</b>, debes tener inscritas <b>todas las asignaturas del 3er año</b> de la carrera de Derecho."},
+   {c:"📖 Reglamento",q:"¿Qué requisitos hay para ser parte del Centro de Estudiantes?",k:"centro estudiantes requisitos postular directiva ser miembro candidato promedio elegible",a:"Para integrar la directiva del Centro de Estudiantes necesitas: ser <b>estudiante regular</b> de la carrera, no estar sancionado, y tener <b>promedio igual o superior a 5,0</b> en los dos semestres anteriores (salvo estudiantes de primer año)."}
+  ];
+
+  const fab=document.getElementById('chatFab'), panel=document.getElementById('chatPanel'),
+        msgs=document.getElementById('chatMsgs'), chips=document.getElementById('chatChips'),
+        inp=document.getElementById('chatIn'), sendb=document.getElementById('chatSend'),
+        closeb=document.getElementById('chatClose');
+  let greeted=false;
+  const cats=[...new Set(FAQ.map(f=>f.c))];
+  function norm(s){return (s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9ñ\s]/g," ").replace(/\s+/g," ").trim();}
+  function bestFaq(q){
+    const words=norm(q).split(" ").filter(w=>w.length>2);
+    if(!words.length) return null;
+    let best=null,bs=0;
+    FAQ.forEach(f=>{
+      const keys=norm(f.k).split(" "), qn=norm(f.q);
+      let sc=0;
+      words.forEach(w=>{ if(keys.some(k=>k===w||k.indexOf(w)===0||w.indexOf(k)===0)) sc++; if(qn.indexOf(w)>=0) sc+=0.4; });
+      if(sc>bs){bs=sc;best=f;}
+    });
+    return bs>=1?best:null;
+  }
+  function addMsg(html,who){const d=document.createElement('div');d.className='cmsg '+who;d.innerHTML=html;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;}
+  function showCats(){chips.innerHTML='';cats.forEach(c=>{const b=document.createElement('button');b.className='cchip';b.textContent=c;b.onclick=()=>showQs(c);chips.appendChild(b);});}
+  function showQs(c){chips.innerHTML='';const back=document.createElement('button');back.className='cchip back';back.textContent='‹ Temas';back.onclick=showCats;chips.appendChild(back);FAQ.filter(f=>f.c===c).forEach(f=>{const b=document.createElement('button');b.className='cchip';b.textContent=f.q;b.onclick=()=>{addMsg(f.q,'user');setTimeout(()=>addMsg(f.a,'bot'),260);};chips.appendChild(b);});}
+  function ask(t){t=(t||"").trim();if(!t)return;addMsg(t,'user');inp.value='';const f=bestFaq(t);setTimeout(()=>{ if(f) addMsg(f.a,'bot'); else addMsg("No encontré una respuesta exacta 🙈. Prueba tocando un tema aquí abajo, o escríbenos al Instagram <b>@listaa.derechoua</b> o al correo <b>cceedereua@gmail.com</b>.",'bot'); },300);}
+  function openChat(){panel.style.display='flex';fab.style.display='none';if(!greeted){greeted=true;addMsg("¡Hola! 👋 Soy <b>Dona Tech</b>, el asistente del Centro de Estudiantes de Derecho. Pregúntame sobre fechas, inscripción de ramos, reglamento, servicios o contactos. Toca un tema o escribe tu duda.",'bot');showCats();}setTimeout(()=>inp.focus(),100);}
+  function closeChat(){panel.style.display='none';fab.style.display='flex';}
+  fab.onclick=openChat; closeb.onclick=closeChat;
+  sendb.onclick=()=>ask(inp.value);
+  inp.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();ask(inp.value);}});
+})();
 </script>
 <script>
 if('serviceWorker' in navigator){
