@@ -426,7 +426,7 @@ td.cell.selon{background:#eaf6ee !important;outline:2px solid #1f6b3a;outline-of
   <div class="msub">Autoridades, servicios y enlaces de la Facultad de Derecho · Sede Temuco.</div>
 
   <div class="ihd">Tu Centro de Estudiantes</div>
-  <a class="ilink" href="https://www.instagram.com/listaa.derechoua" target="_blank" rel="noopener">📸 Síguenos en Instagram · @listaa.derechoua</a>
+  <a class="ilink" href="https://www.instagram.com/ccee.derechouatco" target="_blank" rel="noopener">📸 Síguenos en Instagram · @ccee.derechouatco</a>
   <a class="ilink" href="mailto:cceedereua@gmail.com">✉️ Escríbenos · cceedereua@gmail.com</a>
 
   <div class="ihd">Autoridades y contacto</div>
@@ -503,7 +503,7 @@ td.cell.selon{background:#eaf6ee !important;outline:2px solid #1f6b3a;outline-of
     <p class="soltext">Envía aquí tus peticiones, consultas o casos al Centro de Estudiantes de Derecho. Lo revisamos y te respondemos lo antes posible.</p>
     <a class="solbtn" href="https://forms.office.com/r/FXArxG0RTW" target="_blank" rel="noopener">Hacer una solicitud →</a>
   </div>
-  <p class="note">También puedes escribirnos por Instagram <b>@listaa.derechoua</b> o al correo <b>cceedereua@gmail.com</b>.</p>
+  <p class="note">También puedes escribirnos por Instagram <b>@ccee.derechouatco</b> o al correo <b>cceedereua@gmail.com</b>.</p>
 </div></section>
 
 <div id="legalModal" class="legal-ov" style="display:none">
@@ -832,17 +832,20 @@ renderHorView("all");
 const AVISOS=[
   {tipo:"Encuesta", nivel:"importante",
    titulo:"Encuesta de Evaluación de la Docencia",
-   texto:"Ya está disponible. <b>Respóndela a tiempo:</b> si no la completas, podrías quedar con <b>bloqueo para la toma de carga</b> de asignaturas del próximo período.",
-   hasta:"2026-07-04",
-   cta:{label:"Ir a la encuesta", url:"#"}},
+   texto:"Muy pronto estará disponible. <b>Atento/a:</b> es importante responderla, porque si no la completas podrías quedar con <b>bloqueo para la toma de carga</b> de asignaturas del próximo período.",
+   badge:"🔜 Próximamente"},
+  {tipo:"Centro de Estudiantes", nivel:"evento",
+   titulo:"Asamblea del Centro de Estudiantes",
+   texto:"📅 <b>Miércoles · 18:30 hrs</b> · 📍 Lugar por confirmar. ¡Tu voz, nuestra causa! Te esperamos.",
+   hasta:"2026-06-24"},
+  {tipo:"Receso", nivel:"info",
+   titulo:"Semana de receso",
+   texto:"Se viene la semana de receso del trimestre: <b>13 al 17 de julio</b>. ¡Aprovecha para descansar y ponerte al día!",
+   hasta:"2026-07-13"},
   {tipo:"Inscripción", nivel:"info",
    titulo:"Inscripción de ramos · 3er trimestre",
    texto:"La inscripción de asignaturas del 3er trimestre es el <b>4 de septiembre</b>. Aprovecha de revisar tu Avance y el Planificador para llegar listo.",
-   hasta:"2026-09-04"},
-  {tipo:"Centro de Estudiantes", nivel:"evento",
-   titulo:"Asamblea del Centro de Estudiantes",
-   texto:"Te invitamos a participar. ¡Tu voz, nuestra causa! Más info en nuestro Instagram @listaa.derechoua.",
-   hasta:"2026-06-30"}
+   hasta:"2026-09-04"}
 ];
 function renderMural(){
   const box=document.getElementById("muralList"); if(!box) return;
@@ -863,6 +866,8 @@ function renderMural(){
     if(a.dleft!==null){
       const t=a.dleft===0?"Último día":a.dleft===1?"Queda 1 día":"Quedan "+a.dleft+" días";
       cd='<span class="mcount" style="color:'+n.c+'">⏳ '+t+'</span>';
+    } else if(a.badge){
+      cd='<span class="mcount" style="color:'+n.c+'">'+a.badge+'</span>';
     }
     const cta=a.cta?'<a class="mcta" style="background:'+n.c+'" href="'+a.cta.url+'"'+(a.cta.url&&a.cta.url!=="#"?' target="_blank" rel="noopener"':'')+'>'+a.cta.label+'</a>':"";
     return '<div class="mcard" style="border-left-color:'+n.c+'"><div class="mtop"><span class="mtag" style="color:'+n.c+';background:'+n.bg+'">'+a.tipo+'</span>'+cd+'</div><div class="mtitle">'+a.titulo+'</div><div class="mtext">'+a.texto+'</div>'+cta+'</div>';
@@ -915,7 +920,7 @@ function importData(file){
    {c:"📝 Inscripción",q:"¿Hasta cuándo puedo modificar mi malla / inscripción?",k:"modificar modificacion cambiar malla inscripcion ajustar agregar botar eliminar ramo plazo",a:"Modificación de la inscripción de asignaturas 2026 (TECH):<br>• <b>1er trimestre:</b> 24 al 27 de febrero<br>• <b>2º trimestre:</b> 1 al 5 de junio<br>• <b>3er trimestre:</b> 7 al 11 de septiembre"},
    {c:"📝 Inscripción",q:"¿Cuándo son las pruebas y exámenes?",k:"prueba pruebas evaluacion evaluaciones examen examenes solemne certamen fechas notas repeticion",a:"Cada trimestre tiene evaluaciones regulares y un examen de repetición. Las <b>fechas exactas de cada ramo</b> (1ª, 2ª y examen) están en la pestaña <b>Pruebas</b> de esta app. Examen de repetición: 1er trim 25–27 may · 2º trim 31 ago–2 sep · 3er trim 9–11 dic."},
    // Centro de Estudiantes
-   {c:"⚖️ Centro de Estudiantes",q:"¿Cómo contacto al Centro de Estudiantes?",k:"centro estudiantes contacto contactar ccee instagram correo redes hablar ustedes",a:"Escríbenos por Instagram <b>@listaa.derechoua</b> o al correo <b>cceedereua@gmail.com</b>. ¡Estamos para ayudarte!"},
+   {c:"⚖️ Centro de Estudiantes",q:"¿Cómo contacto al Centro de Estudiantes?",k:"centro estudiantes contacto contactar ccee instagram correo redes hablar ustedes",a:"Escríbenos por Instagram <b>@ccee.derechouatco</b> o al correo <b>cceedereua@gmail.com</b>. ¡Estamos para ayudarte!"},
    // Autoridades
    {c:"👤 Autoridades",q:"¿Quién es la Directora de Sede / Vicedecana?",k:"directora vicedecana decana valeska rivas autoridad jefa direccion sede",a:"<b>Valeska Rivas Arias</b> — Vicedecana de la Facultad de Derecho y Directora Sede Temuco.<br>📧 valeska.rivas@uautonoma.cl"},
    {c:"👤 Autoridades",q:"¿Quién es la Secretaria académica?",k:"secretaria academica francisca game",a:"<b>Francisca Game Musante</b> — Secretaria académica.<br>📧 francisca.game@uautonoma.cl"},
@@ -970,7 +975,7 @@ function importData(file){
   function addMsg(html,who){const d=document.createElement('div');d.className='cmsg '+who;d.innerHTML=html;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;}
   function showCats(){chips.innerHTML='';cats.forEach(c=>{const b=document.createElement('button');b.className='cchip';b.textContent=c;b.onclick=()=>showQs(c);chips.appendChild(b);});}
   function showQs(c){chips.innerHTML='';const back=document.createElement('button');back.className='cchip back';back.textContent='‹ Temas';back.onclick=showCats;chips.appendChild(back);FAQ.filter(f=>f.c===c).forEach(f=>{const b=document.createElement('button');b.className='cchip';b.textContent=f.q;b.onclick=()=>{addMsg(f.q,'user');setTimeout(()=>addMsg(f.a,'bot'),260);};chips.appendChild(b);});}
-  function ask(t){t=(t||"").trim();if(!t)return;addMsg(t,'user');inp.value='';const f=bestFaq(t);setTimeout(()=>{ if(f) addMsg(f.a,'bot'); else addMsg("No encontré una respuesta exacta 🙈. Prueba tocando un tema aquí abajo, o escríbenos al Instagram <b>@listaa.derechoua</b> o al correo <b>cceedereua@gmail.com</b>.",'bot'); },300);}
+  function ask(t){t=(t||"").trim();if(!t)return;addMsg(t,'user');inp.value='';const f=bestFaq(t);setTimeout(()=>{ if(f) addMsg(f.a,'bot'); else addMsg("No encontré una respuesta exacta 🙈. Prueba tocando un tema aquí abajo, o escríbenos al Instagram <b>@ccee.derechouatco</b> o al correo <b>cceedereua@gmail.com</b>.",'bot'); },300);}
   function openChat(){panel.style.display='flex';fab.style.display='none';if(!greeted){greeted=true;addMsg("¡Hola! 👋 Soy <b>Dona Tech</b>, el asistente del Centro de Estudiantes de Derecho. Pregúntame sobre fechas, inscripción de ramos, reglamento, servicios o contactos. Toca un tema o escribe tu duda.",'bot');showCats();}setTimeout(()=>inp.focus(),100);}
   function closeChat(){panel.style.display='none';fab.style.display='flex';}
   fab.onclick=openChat; closeb.onclick=closeChat;
