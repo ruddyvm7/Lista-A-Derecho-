@@ -429,6 +429,10 @@ td.cell.selon{background:#eaf6ee !important;outline:2px solid #1f6b3a;outline-of
   <a class="ilink" href="https://www.instagram.com/ccee.derechouatco" target="_blank" rel="noopener">📸 Síguenos en Instagram · @ccee.derechouatco</a>
   <a class="ilink" href="mailto:cceedereua@gmail.com">✉️ Escríbenos · cceedereua@gmail.com</a>
 
+  <div class="ihd">Apoyo y bienestar</div>
+  <a class="ilink" href="https://www.uautonoma.cl/equidad-de-genero-e-inclusion/" target="_blank" rel="noopener">🛡️ Equidad de Género e Inclusión — reportar una situación</a>
+  <a class="ilink" href="https://forms.office.com/r/GbFXbBqkV0" target="_blank" rel="noopener">🧠 Apoyo psicopedagógico — solicitar (formulario)</a>
+
   <div class="ihd">Autoridades y contacto</div>
   <div class="icard">
     <div class="iname">Valeska Rivas Arias</div>
@@ -836,7 +840,7 @@ const AVISOS=[
    badge:"🔜 Próximamente"},
   {tipo:"Centro de Estudiantes", nivel:"evento",
    titulo:"Asamblea del Centro de Estudiantes",
-   texto:"📅 <b>Miércoles · 18:30 hrs</b> · 📍 Lugar por confirmar. ¡Tu voz, nuestra causa! Te esperamos.",
+   texto:"📅 <b>Hoy · 18:30 hrs</b> · 📍 <b>Sala C38</b>. ¡Tu voz, nuestra causa! Te esperamos.",
    hasta:"2026-06-24"},
   {tipo:"Receso", nivel:"info",
    titulo:"Semana de receso",
@@ -935,6 +939,9 @@ function importData(file){
    // Enlaces
    {c:"🔗 Enlaces",q:"¿Dónde veo el calendario académico?",k:"calendario academico fechas oficiales pdf documento ver calendario",a:"Tienes el calendario académico 2026 completo en la pestaña <b>Info → Enlaces útiles</b>."},
    {c:"🔗 Enlaces",q:"¿Dónde veo becas y beneficios?",k:"beca becas beneficio beneficios apoyo gratuidad ayuda economica financiamiento",a:"En la pestaña <b>Info → Enlaces útiles</b> está el enlace a <b>Beneficios y apoyo estudiantil</b> de la Universidad."},
+   // Apoyo y bienestar
+   {c:"🫶 Apoyo y bienestar",q:"¿Dónde reporto una situación de acoso, violencia o discriminación de género?",k:"acoso violencia discriminacion genero reportar denuncia denunciar situacion abuso hostigamiento equidad caso vulneracion sexual",a:"A través de la <b>Dirección de Equidad de Género e Inclusión</b> de la Universidad, que es el canal oficial para reportar acoso sexual, violencia o discriminación de género. La encuentras en la pestaña <b>Info → Apoyo y bienestar</b>. Si necesitas acompañamiento, también puedes acercarte al Centro de Estudiantes."},
+   {c:"🫶 Apoyo y bienestar",q:"¿Cómo pido apoyo psicopedagógico?",k:"apoyo psicopedagogico psicopedagogia acompañamiento ayuda estudio aprendizaje rendimiento concentracion organizarme tecnicas",a:"Puedes solicitarlo con el <b>formulario de apoyo psicopedagógico</b> de la Universidad, disponible en la pestaña <b>Info → Apoyo y bienestar</b>. Ahí te orientan con técnicas de estudio, organización y acompañamiento académico."},
    // Reglamento General del Estudiante de Pregrado
    {c:"📖 Reglamento",q:"¿Con qué nota apruebo un ramo?",k:"nota aprobar aprobacion minima cuatro paso aprueba calificacion aprobar ramo",a:"La nota mínima de aprobación es <b>4,0</b> (las notas van de 1,0 a 7,0). Para obtener un 4,0 se exige un nivel de logro mínimo del <b>60%</b>. El syllabus puede pedir una nota de aprobación más alta."},
    {c:"📖 Reglamento",q:"¿Qué es el examen de repetición y cuándo lo puedo dar?",k:"examen repeticion recuperativo segunda oportunidad reprobado 3.5 promedio recuperar",a:"Si en un ramo <b>teórico</b> tu promedio final queda <b>entre 3,5 y 3,9</b> y cumpliste la asistencia, puedes rendir el <b>examen de repetición</b> (en las fechas del calendario). Si obtienes 4,0 o más, tu nota final será 4,0; si no, mantienes la nota que tenías."},
@@ -976,7 +983,7 @@ function importData(file){
   function showCats(){chips.innerHTML='';cats.forEach(c=>{const b=document.createElement('button');b.className='cchip';b.textContent=c;b.onclick=()=>showQs(c);chips.appendChild(b);});}
   function showQs(c){chips.innerHTML='';const back=document.createElement('button');back.className='cchip back';back.textContent='‹ Temas';back.onclick=showCats;chips.appendChild(back);FAQ.filter(f=>f.c===c).forEach(f=>{const b=document.createElement('button');b.className='cchip';b.textContent=f.q;b.onclick=()=>{addMsg(f.q,'user');setTimeout(()=>addMsg(f.a,'bot'),260);};chips.appendChild(b);});}
   function ask(t){t=(t||"").trim();if(!t)return;addMsg(t,'user');inp.value='';const f=bestFaq(t);setTimeout(()=>{ if(f) addMsg(f.a,'bot'); else addMsg("No encontré una respuesta exacta 🙈. Prueba tocando un tema aquí abajo, o escríbenos al Instagram <b>@ccee.derechouatco</b> o al correo <b>cceedereua@gmail.com</b>.",'bot'); },300);}
-  function openChat(){panel.style.display='flex';fab.style.display='none';if(!greeted){greeted=true;addMsg("¡Hola! 👋 Soy <b>Dona Tech</b>, el asistente del Centro de Estudiantes de Derecho. Pregúntame sobre fechas, inscripción de ramos, reglamento, servicios o contactos. Toca un tema o escribe tu duda.",'bot');showCats();}setTimeout(()=>inp.focus(),100);}
+  function openChat(){panel.style.display='flex';fab.style.display='none';if(!greeted){greeted=true;addMsg("¡Hola! 👋 Soy <b>Dona Tech</b>, el asistente del Centro de Estudiantes de Derecho. Pregúntame sobre fechas, inscripción de ramos, reglamento, apoyo, servicios o contactos. Toca un tema o escribe tu duda.",'bot');showCats();}setTimeout(()=>inp.focus(),100);}
   function closeChat(){panel.style.display='none';fab.style.display='flex';}
   fab.onclick=openChat; closeb.onclick=closeChat;
   sendb.onclick=()=>ask(inp.value);
